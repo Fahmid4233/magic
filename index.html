@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: #2f364f;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .box {
+      height: 360px;
+      width: 640px;
+      display: flex;
+      transform: skew(25deg) rotate(-25deg);
+      transition: 0.52s;
+    }
+
+    .box:hover {
+      transform: rotate(-25deg) skew(-25deg) translateY(-20px);
+
+    }
+
+    .box span {
+      width: 25%;
+      height: 100%;
+      background: transparent;
+
+      display: block;
+      transition: 0.5s;
+    }
+
+
+
+    .box:hover span:nth-child(even) {
+      transform: skewY(-25deg);
+      box-shadow: inset 20px 0px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .box:hover span:nth-child(odd) {
+      transform: skewY(25deg);
+      box-shadow: inset 20px 0px 50px rgba(0, 0, 0, 0.5);
+    }
+    p{
+      
+      font-family: sans-serif;
+      font-weight: bolder;
+      transform: translate(-200px, -200px);
+      background-color: wheat;
+      border: 1px solid white;
+      border-radius: 3px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>HOVER CENTER</p>
+  <div class="box">
+    <span style="--i:0;"></span>
+    <span style="--i:0;"></span>
+    <span style="--i:0;"></span>
+    <span style="--i:0;"></span>
+  </div>
+</body>
+
+</html>
